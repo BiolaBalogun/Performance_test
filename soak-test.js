@@ -2,9 +2,9 @@ import http from 'k6/http';
 import { sleep, check } from 'k6';
 export const options = {
     stages: [
-        { duration: '30s', target: 200 }, // ramp up
-        { duration: '5ms', target: 200 }, // normal load
-        { duration: '30s', target: 0 }, // ramp down
+        { duration: '5s', target: 40 }, // ramp up
+        { duration: '1m', target: 40 }, // normal load
+        { duration: '5s', target: 0 }, // ramp down
         
     ],
     ext: {
