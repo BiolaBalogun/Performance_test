@@ -21,6 +21,7 @@ export const options = {
   
 };
 export default function () {
-  http.get('http://youtube.com');
+  const res = http.get('http://blazedemo.com');
+  check(res, { 'status was 200': (r) => r.status == 200 });
   sleep(1);
 }
